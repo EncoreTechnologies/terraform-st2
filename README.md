@@ -1,2 +1,7 @@
 # terraform-st2
-Terraform recipes for provisioning StackStorm instances to various providers
+
+This repo contains Terraform recipes for provisioning StackStorm instances to various cloud and infrastructure providers:
+
+* [AWS](aws/README.md)
+
+
