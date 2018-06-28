@@ -2,6 +2,7 @@
 
 This repo contains Terraform recipes for provisioning StackStorm instances to various cloud and infrastructure providers:
 
-* [AWS](aws/README.md)
+* [AWS](aws/)
+* [VMware vSphere](vsphere/)
 
 
