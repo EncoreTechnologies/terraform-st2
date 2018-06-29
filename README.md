@@ -14,7 +14,8 @@ The links below navigate into the appropriate sub-folder for the cloud or infras
 provider of your choise. Each provider is different, so please click on the links below
 and follow the instructions specific to your provider:
 
-* [AWS](aws/)
+* [Amazon Web Services (AWS)](aws/)
+* [Google Cloud Platform (GCP)](gcp/)
 * [VMware vSphere](vsphere/)
 
 

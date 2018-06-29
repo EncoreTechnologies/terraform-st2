@@ -1,4 +1,4 @@
-# AWS
+# Amazon Web Services (AWS)
 
 This Terraform recipe provisions a new EC2 instance and Security Group for a test instance of StackStorm.
 
@@ -10,13 +10,15 @@ To provision StackStorm in AWS you'll need to provide values for the following v
 * `aws_secret_key` - AWS secret key for your IAM user.
 * `aws_key_pair` - Name of the key pair that will be used to generate the instance password.
 * `aws_private_key_pem` - Path to your AWS private key file (.pem) on your local disk
-* `aws_region` - The region to provision the VM in (default=`us-east-2`).
-* `aws_instance_type` - Type of AWS instances to provision (default=`t2.medium`).
-* `public_ip` - Public IP of the machine you're running terraform from
-* `stackstorm_username` - Username for the StackStorm admin user (default=`st2admin`).
+* `aws_region` - The region to provision the VM in [default = `us-east-2`]
+* `aws_instance_type` - Type of AWS instances to provision [default=`t2.medium`]
+* `public_ip_cidr` - Public IP (CIDR notation) of the machine you're running terraform from (this limits the firewall rules so only you can login via ssh/https)
+* `stackstorm_username` - Username for the StackStorm admin user [default = `st2admin`]
 * `stackstorm_password` - Password for the StackStorm admin user.
 
-Reference: https://www.terraform.io/docs/providers/aws/index.html
+For more information about these variables see: https://www.terraform.io/docs/providers/aws/index.html
+
+For information on how to create AWS credentials see: https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/
 
 ## Execution
 
@@ -38,7 +40,7 @@ export TF_VAR_aws_secret_key='yyy'
 export TF_VAR_aws_region='us-east-2'
 export TF_VAR_aws_key_pair='DaveSmith'
 export TF_VAR_aws_private_key_pem='~/.aws/DaveSmith.pem'
-export TF_VAR_public_ip="`curl http://ipecho.net/plain`/32"
+export TF_VAR_public_ip_cidr="`curl http://ipecho.net/plain`/32"
 export TF_VAR_stackstorm_password="SomePassword"
 ```
 

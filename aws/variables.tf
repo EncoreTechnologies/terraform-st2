@@ -22,8 +22,8 @@ variable "aws_instance_type" {
   default = "t2.medium"
 }
 
-# Public IP of the machine you're running terraform from
-variable "public_ip" {}
+# Public IP (CIDR notation) of the machine you're running terraform from (this limits the firewall rules so only you can login via ssh/https)
+variable "public_ip_cidr" {}
 
 # username for the StackStorm admin user
 variable "stackstorm_username" {

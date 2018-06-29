@@ -11,7 +11,7 @@ This Terraform recipe provisions a new VM in vSphere by cloning an existing temp
 
 ## Variables
 
-To provision StackStorm in AWS you'll need to provide values for the following variables:
+To provision StackStorm you'll need to provide values for the following variables:
 
 * `vsphere_server` - Hostname/IP of the vSphere server
 * `vsphere_username` - Username to login to the vSphere server
