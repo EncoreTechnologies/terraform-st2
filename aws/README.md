@@ -20,8 +20,6 @@ Reference: https://www.terraform.io/docs/providers/aws/index.html
 
 ## Execution
 
-Run the setup phase, then choose one of the provisioning options
-
 ### Setup Provider
 
 ``` shell
