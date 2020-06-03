@@ -32,14 +32,14 @@ resource "aws_security_group" "stackstorm_allow_ssh_https" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${var.public_ip}"]
+    cidr_blocks = ["${var.public_ip_cidr}"]
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["${var.public_ip}"]
+    cidr_blocks = ["${var.public_ip_cidr}"]
   }
 
   egress {
