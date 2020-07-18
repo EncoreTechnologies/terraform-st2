@@ -66,6 +66,7 @@ resource "aws_instance" "stackstorm" {
     ]
     
     connection {
+      host        = self.public_ip
       type        = "ssh"
       user        = "ubuntu"
       private_key = "${file(var.aws_private_key_pem)}"
