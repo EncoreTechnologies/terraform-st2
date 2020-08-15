@@ -18,15 +18,18 @@ resource "digitalocean_firewall" "stackstorm_allow_ssh_https" {
   outbound_rule {
     protocol          = "tcp"
     port_range        = "1-65535"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 
   outbound_rule {
     protocol          = "udp"
     port_range        = "1-65535"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 
   outbound_rule {
     protocol          = "icmp"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 }
 
